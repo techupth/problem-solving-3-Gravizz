@@ -1,7 +1,16 @@
 // Exercise 1: Length of Last Word
 
-const lengthOfLastWord = function (s) {
+const lengthOfLastWord = function (sentence) {
   //Start coding here
+  const arrayWord = sentence.split(" ");
+  let lastWord;
+  for (let i = arrayWord.length - 1; i > 0; i--) {
+    if (arrayWord[i] != "") {
+      lastWord = arrayWord[i];
+      break;
+    }
+  }
+  return lastWord.length;
 };
 
 const result1 = lengthOfLastWord("Hello World");
